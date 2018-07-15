@@ -6,7 +6,7 @@ node ('node1'){
 		git 'https://github.com/dle95035/hello.git'
 	}
 	
-	stage ('build') {
-		sh  "'${gradleHome}/bin/gradle' clean  build" 
+	stage ('build-node1') {
+		sh  "'${gradleHome}/bin/gradle' clean build" 
 	}
 }
