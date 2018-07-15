@@ -13,6 +13,9 @@ node ('node1'){
 	
 	stage ('verify') {
 		def verifyCall = load("/root/shared-libraries/src/verify.groovy") 
-        verifyCall("Please Verify the build")
+		timeout(time: 5, unit: 'SECONDS') {
+			verifyCall("Please Verify the build")
+		}
+        
 	}
 } 
