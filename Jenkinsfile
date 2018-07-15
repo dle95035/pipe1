@@ -1,5 +1,5 @@
 
-@Library('Utilities@1.5')  
+@Library('Utilities@master')  
 import static org.conf.Utilities.* 
 
 node ('node1'){
