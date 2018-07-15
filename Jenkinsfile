@@ -10,4 +10,9 @@ node ('node1'){
 	stage ('build') {
 		 gbuild this, 'clean build'
 	}
+	
+	stage ('verify') {
+		def verifyCall = load("/root/shared-libraries/src/verify.groovy") 
+        verifyCall("Please Verify the build")
+	}
 } 
