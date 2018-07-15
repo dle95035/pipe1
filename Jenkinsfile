@@ -10,4 +10,4 @@ node ('node1'){
 	stage ('build') {
 		 gbuild this, 'clean build'
 	}
-}
+} 
