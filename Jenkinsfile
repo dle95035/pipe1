@@ -22,7 +22,7 @@ node ('node1'){
 				// always run with a new workspace 
 				sleep 10
 				sh 'pwd'
-				sh 'echo hello'
+				sh 'echo hello > master.txt'
 			}}, 
        )   
 		}
