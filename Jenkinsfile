@@ -2,7 +2,6 @@
 @Library('Utilities@master')  
 import static org.conf.Utilities.* 
 import jenkins.model.*
-jenkins = Jenkins.instance
 
 node ('node1'){
 
@@ -19,9 +18,9 @@ node ('node1'){
 				// always run with a new workspace 
 				sleep 20 
 			}}, 
-			worker3: { node ('worker_slave_1'){ 
+			worker_slave_1: { node ('worker_node2'){ 
 				// always run with a new workspace 
-				bash /root/test.sh
+				echo "abc" > master.txt
 			}}, 
        )   
 		}
