@@ -1,6 +1,8 @@
 
 @Library('Utilities@master')  
 import static org.conf.Utilities.* 
+import jenkins.model.*
+jenkins = Jenkins.instance
 
 node ('node1'){
 
