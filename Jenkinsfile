@@ -19,7 +19,7 @@ node ('node1'){
 			}}, 
 			worker3: { node ('worker_slave_1'){ 
 				// always run with a new workspace 
-				bash test.sh
+				bash /root/test.sh
 			}}, 
        )   
 		}
