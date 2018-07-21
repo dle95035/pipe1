@@ -10,7 +10,19 @@ node ('node1'){
 		}
 		
 		stage ('build') {
-			gbuild this, 'clean build'
+			// gbuild this, 'clean build'
+			// execute required unit tests in parallel
+			parallel ( 
+			worker2: { node ('worker_node2'){ 
+				// always run with a new workspace 
+				sleep 20 
+			}}, 
+			worker3: { node ('worker_slave_1'){ 
+				// always run with a new workspace 
+				pwd
+				echo "abc">master.txt
+			}}, 
+       )   
 		}
 		
 		stage ('verify') {
