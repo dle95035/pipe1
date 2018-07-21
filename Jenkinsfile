@@ -21,10 +21,10 @@ node ('node1'){
 			worker_s1: { node ('worker_slave_1'){ 
 				// always run with a new workspace 
 				sleep 10
-				sh 'pwd'
-				sh 'echo hello > master.txt'
+				sh 'echo the pipeline executed on: > master'
+				sh 'date >> master.txt'
 			}}, 
-       )   
+			)   
 		}
 		
 		stage ('verify') {
