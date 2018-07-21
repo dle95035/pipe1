@@ -19,8 +19,7 @@ node ('node1'){
 			}}, 
 			worker3: { node ('worker_slave_1'){ 
 				// always run with a new workspace 
-				pwd
-				echo "abc">master.txt
+				ip address
 			}}, 
        )   
 		}
