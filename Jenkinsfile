@@ -21,6 +21,8 @@ node ('node1'){
 			worker_s1: { node ('worker_slave_1'){ 
 				// always run with a new workspace 
 				sleep 10
+				pwd
+				echo hello
 			}}, 
        )   
 		}
