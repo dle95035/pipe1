@@ -18,7 +18,7 @@ node ('node1'){
 				// always run with a new workspace 
 				sleep 20 
 			}}, 
-			worker_slave_1: { node ('worker_node2'){ 
+			worker_s1: { node ('worker_slave_1'){ 
 				// always run with a new workspace 
 				sleep 10
 			}}, 
