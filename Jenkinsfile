@@ -20,7 +20,7 @@ node ('node1'){
 			}}, 
 			worker_slave_1: { node ('worker_node2'){ 
 				// always run with a new workspace 
-				echo "abc" > master.txt
+				sleep 10
 			}}, 
        )   
 		}
