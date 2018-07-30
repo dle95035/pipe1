@@ -14,11 +14,12 @@ node ('node1'){
 			// gbuild this, 'clean build'
 			// execute required unit tests in parallel
 			parallel ( 
-			worker2: { node ('worker_node2'){ 
+			worker1: { node ('linux-slave-1'){ 
 				// always run with a new workspace 
 				sleep 20 
+				sh 'date >> master.txt'
 			}}, 
-			worker_s1: { node ('worker_slave_1'){ 
+			worker2: { node ('linux-slave-1'){ 
 				// always run with a new workspace 
 				sleep 10
 				sh 'echo the pipeline executed on: > master'
