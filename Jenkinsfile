@@ -17,13 +17,13 @@ node ('node1'){
 			worker1: { node ('linux-slave-1'){ 
 				// always run with a new workspace 
 				sleep 20 
-				sh 'date >> master.txt'
+				sh 'date >> /root/master.txt'
 			}}, 
 			worker2: { node ('linux-slave-1'){ 
 				// always run with a new workspace 
 				sleep 10
-				sh 'echo the pipeline executed on: > master'
-				sh 'date >> master.txt'
+				sh 'echo the pipeline executed on slave 2'
+				sh 'date >> /root/master.txt'
 			}}, 
 			)   
 		}
