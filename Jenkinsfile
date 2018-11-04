@@ -19,12 +19,6 @@ node ('node1'){
 				sleep 20 
 				sh 'date >> /root/master.txt'
 			}}, 
-			worker2: { node ('linux-slave-1'){ 
-				// always run with a new workspace 
-				sleep 10
-				sh 'echo the pipeline executed on slave 2'
-				sh 'date >> /root/master.txt'
-			}}, 
 			)   
 		}
 		
