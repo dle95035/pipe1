@@ -1,8 +1,4 @@
 
-@Library('Utilities@master')  
-import static org.conf.Utilities.* 
-import jenkins.model.*
-
 node ('node1'){
 
 	try {
