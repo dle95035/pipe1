@@ -1,5 +1,5 @@
 
-node ('node1'){
+node {
 
 	try {
 		stage ('source') {
